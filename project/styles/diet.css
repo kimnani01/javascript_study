@@ -1,1 +1,10 @@
 /* 디자인은 심미적으로 자유롭게! */
+main {
+    background-image: url();
+    background-size: cover;
+    height: 100vh;
+}
+main h1 p {}
+main h1 ul li {}
+main h1 ul li input {}
+main h1 p .result {}

@@ -6,5 +6,13 @@
 */
 const height = document.querySelector('#height')
 const weight = document.querySelector('#weight')
-const goal = document.querySelector('#goal')
+const goals = document.querySelector('#goals')
 const btn = document.querySelector('#result')
+btn.addEventListener('click',function(){
+    let save = (Number(height.value)-100)*0.9
+    console.log(save)
+    let plus = Number(weight.value)-save
+    console.log(plus)
+    goals.value = `적정체중은 ${save}kg이며 ${plus}kg 초과되셨습니다.`
+    console.log(goals.value)
+})
