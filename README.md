@@ -144,3 +144,17 @@
 * `document.querySelectorAll("태그명")`
 * `document.querySelectorAll(".클래스명")`
 * `getElements...`와 `querySelectorAll` 함수는`index`를 사용해서 대상을 선택하므로 사용 시 주의가 필요하다.
+------------------
+## 부모 parentNode, parentElemnt 속성
+## 자식, 자손잡기 childNodes, children 속성
+* 추가 속성 및 메소드를 연결해서 다양한 기능 수행
+* headerChild2[0].children[0].style (o)
+* headerChild2[0].children[0].addEventListener (o)
+### childNodes
+* 공백(text) 포함한 자식
+### children
+* 공백 제외한 자식
+### innerHTML, innerText
+* 단순 읽기, 변경 단순 수행
+* headerChild2[0].innerHTML.style (x)
+* headerChild2[0].innerHTML.addEventListener (x)
