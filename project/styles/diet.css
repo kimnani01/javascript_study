@@ -1,10 +1,55 @@
 /* 디자인은 심미적으로 자유롭게! */
-main {
-    background-image: url();
-    background-size: cover;
-    height: 100vh;
+main * {font-family: 'Gamja Flower', sans-serif;}
+body {
+    background-color: #93bee0;
 }
-main h1 p {}
-main h1 ul li {}
-main h1 ul li input {}
-main h1 p .result {}
+main {
+    background-image: url(https://i.pinimg.com/originals/0d/80/40/0d80406c0f17f5fd81c69a3c293f1a09.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 750px;
+    text-align: center;
+    margin: 50px auto;
+    padding: 65px 0;
+}
+main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 150px;
+}
+main h1 + p {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+main ul li {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+main ul li:last-child {
+    margin: 0;
+}
+main input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #d0d0d0;
+}
+main input:focus {
+    outline: 2px solid #93bee0;
+    /* border: 0; */
+}
+main ul + p {
+    margin: 50px 0;
+}
+main ul + p #result {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color: pink; 
+    border: 0;
+    border-radius: 10px;
+}
+main p + p {
+    font-size: 1.5rem;
+}
+main p input {
+    width: 400px;
+    text-align: center;
+}
