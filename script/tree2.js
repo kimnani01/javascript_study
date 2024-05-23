@@ -25,3 +25,29 @@ header.addEventListener('mouseover',function(){
     header.children[1].children[2].innerText = 'MENU'
     header.children[1].children[3].innerText = 'MENU'
 })
+//------------------------
+//childNode[n], children[n] == 부모 자식:nth-child(n)
+//fristChild, fristElementChild ==  frist-child, last-child
+const nav = document.querySelector('nav')
+console.log(nav)
+console.log(nav.firstChild)
+console.log(nav.firstElementChild)
+console.log(nav.firstElementChild.innerText)
+console.log(nav.lastElementChild)
+console.log(nav.lastElementChild.innerText)
+//형제 관계 (+)
+//JS 이전, 다음 형제 모두 처리 가능
+//nextSibiling 공백포함 다음 형제 속성
+//nextElementSibling 다음 형제 요소만 인식 속성
+//previousSibling 공백포함 이전 형제 속성
+//previousElementSibling 이전 형제 요소만 인식 속성
+const nav_a = document.querySelectorAll('nav a')
+console.log(nav_a)
+//Q. 메뉴2의 이전형제 메뉴1을 선택해서 배경색 노랑 변경
+console.log(nav_a[1])
+console.log(nav_a[1].previousElementSibling)
+nav_a[1].previousElementSibling.style.backgroundColor = 'yellow'
+//Q. 메뉴2의 다음형제 메뉴4를 선택해서 배경색 aqua 변경
+console.log(nav_a[1])
+console.log(nav_a[1].nextElementSibling.nextElementSibling)
+nav_a[1].nextElementSibling.nextElementSibling.style.backgroundColor = 'aqua'

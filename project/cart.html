@@ -14,12 +14,34 @@
         <h1>장바구니</h1>
         <div class="cart_wrap">
             <div class="top">
-                <input type="checkbox" name="all.select" id="all.select">
-                <label for="all.select">전체선택 (
+                <input type="checkbox" name="all.select" id="all_select">
+                <label for="all_select">전체선택 (
                     <span class="select_num">0</span>/
                     <span class="total_num">0</span>
                 )</label>
                 <a href="#" class="select_delete">선택삭제</a>
+            </div>
+            <div class="item_wrap">
+                <div class="item">
+                    <div class="select">
+                        <input type="checkbox" name="item_select" id="item_select1">
+                    </div>
+                    <a href="#">
+                        <p class="photo"><img src="#" alt=""></p>
+                        <h2>[남향푸드또띠아] 핫 치킨 브리또 2개입</h2>
+                        <p class="detail">[남향푸드또띠아] 간편 브리또 15종 2개입 (택1)</p>
+                    </a>
+                    <div class="num">
+                        <button type="button" class="minus">-</button>
+                        <input type="text" name="count" id="count">
+                        <button type="button" class="plus">+</button>
+                    </div>
+                    <div class="price">
+                        <em class="total_price">24,000원</em>
+                        <span class="original_price">33,000원</span>
+                    </div>
+                    <a href="#" class="item_delete">x</a>
+                </div>
             </div>
         </div>
     </main>
