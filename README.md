@@ -156,7 +156,7 @@
 * `lastChild` : 공백(text) 포함한 마지막 자식 
 * `lastElementChild`: 공백 제외한 마지막 형제
 * `nextSibling`: 공백(text) 포함한 다음 형제
-* `nextElementSibling` : 공백 제외한 마지막 형제
+* `nextElementSibling` : 공백 제외한 다음 형제
 * `previousSibling`: 공백(text) 포함한 이전 형제
 * `previousElementSibling`: 공백 제외한 이전 형제
 ## 자바스크립트 객체 속성
@@ -182,16 +182,11 @@
 * 조건 작성위치에 비교연산자를 사용한다.
 * 비교연산자 : <, >, ==, <=, >=, !=
 -------------------------
-## false : 거짓으로 인식하는 => falsy
-1. false
-2. null
-3. undefined
-4. NaN (not a number)
-5. 0
-6. "" //빈 문자열
-## true : 참으로 인식하는 값 => truthy
-1. true
-2. false가 아닌 모든 값들
-3. 0보다 큰 숫자
-4. [] //빈 배열
-5. {} //빈 객체
+## 조건문
+* `if(조건식){조건식이 참일 경우 실행 결과}`
+* `if(조건식){참 실행}else{조건식이 거짓일 때 실행결과}`
+* 조건식 작성 시 주의 사항 > 참, 거짓으로 결과가 구분되는 데이터를 확인하고 작성해야 한다.
+### falsy
+* false, null, undefined NaN, 0, ""
+### truthy
+* false가 아닌 모든 값, {}, {}

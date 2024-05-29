@@ -1,0 +1,51 @@
+/* js 호출용 design class */
+.no_input{
+    color: green;
+    font-weight: 700;
+}
+.error_input{
+    color: red;
+    font-weight: 900;
+}
+
+#login {
+    background-color: blanchedalmond;
+    width: 700px; height: 100vh;
+    margin: 0 auto; padding: 50px 0;
+    text-align: center;
+}
+#login h1 {
+    font-size: 2rem; font-weight: 700;
+    margin-bottom: 50px;
+}
+#login ul {}
+#login ul li {}
+#login ul li input {
+    border-radius: 10px;
+    line-height: 40px;
+    width: 300px;
+    border: 1px solid gray;
+    padding-left: 16px;
+    outline: none;
+}
+#login ul li #user_id {
+    border-radius: 10px 10px 0 0;
+    border-bottom: 0;
+}
+#login ul li #user_pw {
+    border-radius: 0 0 10px 10px;
+}
+#login ul li input:focus{
+    border: 1px solid yellowgreen;
+}
+#login .error {}
+#login .btn {}
+#login .btn #login_btn {
+    background-color: black;
+    color: white;
+    width: 300px; line-height: 40px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+#login .search {}
+#login .search a {}
