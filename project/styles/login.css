@@ -30,13 +30,18 @@
 }
 #login ul li #user_id {
     border-radius: 10px 10px 0 0;
-    border-bottom: 0;
 }
 #login ul li #user_pw {
     border-radius: 0 0 10px 10px;
 }
 #login ul li input:focus{
     border: 1px solid yellowgreen;
+}
+#login ul li #user_id.off{
+    border-bottom: 0;
+}
+#login ul li #user_pw.off{
+    border-top: 0;
 }
 #login .error {}
 #login .btn {}

@@ -57,3 +57,13 @@ login_btn.addEventListener('click', ()=>{
         error_p.style.fontWeight = '900' */
     }
 })
+//아이디칸 클릭시 비번칸 위쪽 보더 삭제
+user_id.addEventListener('click', ()=>{
+    user_id.classList.remove('off')
+    user_pw.classList.add('off')
+}) 
+//비번칸 클릭시 아이디칸 아래쪽 보더 삭제
+user_pw.addEventListener('click', ()=>{
+    user_pw.classList.remove('off')
+    user_id.classList.add('off')
+})
