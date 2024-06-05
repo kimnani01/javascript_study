@@ -18,6 +18,7 @@ header > nav .sub_bg {
   position: absolute;
   width: 100%;
   top: 70px;
+  left: 0;
   height: 220px;
 }
 header > nav .gnb {
@@ -37,11 +38,11 @@ header > nav .gnb > li > .sub {
   position: absolute;
   width: 100%;
   top: 50px;
+  width: -moz-max-content;
+  width: max-content;
 }
 header > nav .gnb > li > .sub li a {
   font-size: 0.91rem;
-  width: -moz-max-content;
-  width: max-content;
   display: block;
   white-space: nowrap;
   line-height: 30px;

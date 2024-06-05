@@ -10,7 +10,7 @@ header {
     > nav {
         .sub_bg {
             background-color: $bg1;
-            @include pst_absol; top: 70px;
+            @include pst_absol; top: 70px; left: 0;
             height: 220px;
         }
         .gnb {
@@ -21,10 +21,10 @@ header {
                 position: pst_r;
                 > a {font-weight: 700;}
                 > .sub {
-                    @include pst_absol; top: 50px;
+                    @include pst_absol; top: 50px; width: max-content;
                     li {
                         a {
-                            font-size: $font91; width: max-content;
+                            font-size: $font91; 
                             display: block; white-space: nowrap;
                             line-height: $l-h30;
                             img {width: 170px;}
