@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll-1</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!-- 스크롤트리거 플러그인 연결 주소(필수) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <style>
+        main {}
+        main section {
+            height: 100vh; text-align: center;
+            font-size: 5rem;
+            background-color: beige;
+        }
+        main .s2 {background-color: lightcoral;}
+        main .s4 {background-color: pink;}
+        main section img {
+            opacity:0; /* trigger 애니메이션 초기 동작 */
+            width: 800px;
+        }
+        </style>
+</head>
+<body>
+    <main>
+        <section class="s1">1</section>
+        <section class="s2">
+            <img src="https://i.pinimg.com/originals/1b/c9/8b/1bc98bd7df7d4c00bc61969748918a8a.jpg" alt="">
+        </section>
+        <section class="s3">3</section>
+        <section class="s4">
+            <img src="https://i.pinimg.com/originals/73/9c/e2/739ce2251e8618d2195f81d6bd191720.jpg" alt="">
+        </section>
+    </main>
+    <script>
+        //gsap.to('적용대상', {scrollTrigger:'뷰포트인식대상'})
+        gsap.to('.s2 img',{
+            scrollTrigger:'.s2',
+            duration:1,//1초
+            delay:0.5,
+            x:300, y:200,
+            borderRadius:50,
+            scale:0.8,
+            opacity:1,
+        })
+        //gsap.to('대상', {옵션:값, 옵션값,})
+        gsap.to('.s4 img',{
+            scrollTrigger: '.s4',
+            duration:1,
+            delay:0.5,
+            y:400,
+            scale:1.2,
+            opacity:1,
+        })
+    </script>
+</body>
+</html>
