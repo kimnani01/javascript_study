@@ -1,4 +1,5 @@
 /* HTML 초기화용 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 * {box-sizing: border-box;}
 body,html,
 h1,h2,h3,h4,h5,h6,fieldset,input,button,select,textarea,

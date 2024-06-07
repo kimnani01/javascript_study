@@ -1,0 +1,37 @@
+// $변수, @mixin 스타일 규칙 모음
+//1. 원본(style.css) 파일 중 반복되는 속성 값을 변수로 만들기
+//2. (위) 기준 반복되는 스타일 규칙 2개 이상을 @mixin 만들기
+$bg1: #fff;
+$color1: #fff;
+$main-color: #002c5f;
+$color3: #aaa;
+$p30: 30px;
+$m-r100: 100px;
+$w100: 100%;
+$w500: 500px;
+$font91: 0.91rem;
+$f-w700: 700;
+$l-h30: 30px;
+$pst_r: relative;
+$pst_a: absolute;
+$align: center;
+@mixin layout_p {padding: 100px 30px;}
+@mixin flex-r {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
+}
+@mixin pst_fixed {
+    position: fixed; left: 0; top: 0; z-index: 999;
+}
+@mixin pst_absol {
+    position: absolute; width: 100%;
+}
+@mixin title_level-1 {
+    font-size: 2.5rem; line-height: 1.3;
+}
+@mixin title-level-2 {
+    font-size: 1.25rem; color: $color3; 
+    line-height: 1.3;
+}

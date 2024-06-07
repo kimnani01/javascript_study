@@ -1,0 +1,162 @@
+@import 'common';
+//common.scss 변수 및 mixin 이용해서 중첩 선택자 규칙으로 디자인 만들기
+header {
+    height: 70px; width: $w100;
+    background-color: $bg1;
+    @include pst_fixed;
+    @include flex-r;
+    padding: 0 $p30;
+    h1 {a {img {}}}
+    > nav {
+        .sub_bg {
+            background-color: $bg1;
+            @include pst_absol; top: 70px; left: 0;
+            height: 220px;
+        }
+        .gnb {
+            display: flex;
+            > li:last-child {margin: 0;}
+            > li {
+                margin-right: $m-r100;
+                position: pst_r;
+                > a {font-weight: 700;}
+                > .sub {
+                    @include pst_absol; top: 50px; width: max-content;
+                    li {
+                        a {
+                            font-size: $font91; 
+                            display: block; white-space: nowrap;
+                            line-height: $l-h30;
+                            img {width: 170px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .lnb {
+        display: flex;
+        .m_nav {
+            display: none;
+            .all_nav {
+                display: block; width: 24px; height: 24px;
+                img {width: $w100;}
+            }
+            //모바일 전용 내비게이션(m_nav 자식 nav)
+            nav {
+                /* display: none; */ /* 초기 숨기기(이후 JS 처리) */
+                background-color: $bg1;
+                z-index: 900;
+                @include pst_absol; top: 70px; right: 0;
+                width: 300px; height: calc(100vh - 70px);
+                .sub_bg {}
+                .gnb {> li {
+                        > a {
+                            border-bottom: 1px solid #aaa;
+                            display: block;
+                            line-height: 40px;
+                            font-weight: $f-w700;
+                            margin: 0 10px;
+                        }
+                        > .sub {
+                            // display: none;
+                            li {
+                                border-bottom: 1px dashed #ddd;
+                                display: block;
+                                margin: 0 25px;
+                                line-height: 40px;
+                                a{
+                                    font-size: $font91;
+                                    img{width: 70%;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        > a {
+            background-image: url(../images/ico_header.png);
+            width: 20px; height: 25px;
+            margin-left: 12px;
+            span {display: none;}
+        }
+        .my_menu {}
+        .notice {background-position-x: right;}
+    }
+}
+//------------------main
+main {margin-top: 70px;
+    .visual {
+        position: pst_r;
+        background-image: url(../images/visual.png);
+        background-size: cover;
+        background-position: center;
+        height: calc(100vh - 70px);
+        .txt {
+            color: $color1; text-align: $align;
+            padding-top: 50px;
+            h1 {font-size: 5rem; font-weight: 800;}
+            p {font-size: 1.2rem; margin: 30px 0;}
+            .link {
+                a {
+                    display: inline-block;
+                    color: $color1; background: $main-color;
+                    padding: 10px 20px;
+                }
+            }
+        }
+        .scroll {
+            text-align: $align;
+            @include pst_absol; bottom: 80px;
+            animation: move 0.7s linear alternate infinite;
+            img {filter: invert(1); width: 50px;}
+        }
+    }//visual end
+    .advantage{
+        @include flex-r;
+        @include layout_p;
+        .title {
+            width: 500px; align-self: flex-start;
+            h1 {
+                @include title_level-1;
+                em{font-weight: $f-w700;}
+            }
+            p {@include title-level-2}
+        }
+        .contents {
+            width: calc(100% - 500px);
+            @include flex-r;
+            overflow-x: auto; overflow-y: hidden;
+            a {padding-right: 30px;
+                .photo {img{}}
+                .photo+p {
+                    margin: 10px 0;
+                }
+                h2 {
+                    color: $main-color;
+                    @include title-level-2;
+                    margin-bottom: 20px;
+                    span{
+                        color: $color1;
+                        background-color: $main-color;
+                        font-size: $font91;
+                        padding: 2px 5px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }//advantage end
+    .design {@include layout_p; position: relative;
+        h1 {
+            font-size: 15rem; font-weight: 900;
+            color: #ddd;
+            @include pst_absol; text-align: center;
+            z-index: -1; top: 0;
+        }
+        .photo {text-align: center;
+            img {}
+        }
+    }//design end
+}//main end
