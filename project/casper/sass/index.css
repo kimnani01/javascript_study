@@ -65,7 +65,7 @@ header .lnb .m_nav .all_nav img {
   width: 100%;
 }
 header .lnb .m_nav nav {
-  display: none; /* 초기 숨기기(이후 JS 처리) */
+  /* display: none; */ /* 초기 숨기기(이후 JS 처리) */
   background-color: #fff;
   z-index: 900;
   position: absolute;
